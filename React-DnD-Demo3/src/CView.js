@@ -2,10 +2,10 @@ import React, { PropTypes, Component } from 'react';
 import { DragSource } from 'react-dnd';
 
 const style = {
-  border: '1px dashed gray',
-  backgroundColor: 'white',
   cursor: 'move',
-  float: 'right'
+  float: 'right',
+  height: '20px',
+  width: '20px'
 };
 
 const boxSource = {
@@ -30,12 +30,7 @@ class CView extends Component {
     const opacity = isDragging ? 0.4 : 1;
 
     return connectDragSource(
-      <div style={{ ...style, opacity }}>
-        {isDropped ?
-          <s>{name}</s> :
-          name
-        }
-      </div>
+      <img src={'./imgs/v.png'} style={{ ...style, opacity }} />
     );
   }
 }
@@ -44,3 +39,8 @@ export default DragSource(props => props.type, boxSource, (connect, monitor) => 
   connectDragSource: connect.dragSource(),
   isDragging: monitor.isDragging()
 }))(CView)
+
+  // {isDropped ?
+  //         <s>{name}</s> :
+  //         name
+  //       }
