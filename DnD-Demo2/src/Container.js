@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import Dustbin from './Dustbin';
-import Box from './Box';
+import ImageBox from './ImageBox';
 
 class Container extends Component {
   render() {
@@ -12,9 +12,9 @@ class Container extends Component {
           <Dustbin />
         </div>
         <div style={{ overflow: 'hidden', clear: 'both' }}>
-          <Box name='Glass' />
-          <Box name='Banana' />
-          <Box name='Paper' />
+          <ImageBox name='DB1' src='./img1.jpg'/>
+          <ImageBox name='DB2' src="./img2.jpg"/>
+          <ImageBox name='DB3' src="./img3.jpeg"/>
         </div>
       </div>
     );
