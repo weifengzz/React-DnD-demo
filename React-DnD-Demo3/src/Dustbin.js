@@ -2,14 +2,12 @@ import React, { PropTypes, Component } from 'react';
 import { DropTarget } from 'react-dnd';
 
 const style = {
-  height: '12rem',
-  width: '12rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
+  width: '50px',
+  height: '50px',
   color: 'white',
-  padding: '1rem',
   textAlign: 'center',
   fontSize: '1rem',
+  padding: '5px',
   lineHeight: 'normal',
   float: 'left'
 };
@@ -34,7 +32,7 @@ class Dustbin extends Component {
     const { accepts, isOver, canDrop, connectDropTarget, lastDroppedItem } = this.props;
     const isActive = isOver && canDrop;
 
-    let backgroundColor = '#222';
+    let backgroundColor = '#ffffff';
     if (isActive) {
       backgroundColor = 'darkgreen';
     } else if (canDrop) {
@@ -43,13 +41,10 @@ class Dustbin extends Component {
 
     return connectDropTarget(
       <div style={{ ...style, backgroundColor }}>
-        {isActive ?
-          'Release to drop' :
-          'This dustbin accepts: ' + accepts.join(', ')
-        }
+     
 
         {lastDroppedItem &&
-          <p>Last dropped: {JSON.stringify(lastDroppedItem)}</p>
+          (<div style={{border: '1px dashed gray', height: 40, width: 40, margin: 0}}></div>)
         }
       </div>
     );
@@ -61,3 +56,8 @@ export default DropTarget(props => props.accepts, dustbinTarget, (connect, monit
   isOver: monitor.isOver(),
   canDrop: monitor.canDrop()
 }))(Dustbin)
+
+   // {isActive ?
+   //        'Release to drop' :
+   //        'This dustbin accepts: ' + accepts.join(', ')
+   //      }

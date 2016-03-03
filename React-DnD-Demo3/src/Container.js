@@ -85,6 +85,6 @@ class Container extends Component {
     }));
   }
 }
-export default DragDropContext(HTML5Backend)(Container)
+export default (Container)
 
 

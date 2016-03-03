@@ -1,15 +1,17 @@
 import React from 'react'
+import CView from './CView';
 require ("bootstrap/dist/css/bootstrap.min.css")
 require("./css.css")
+import ItemTypes from "./ItemTypes"
 
-export default class LeftList extends React.Component {
+class LeftList extends React.Component {
 	render () {
 		return (
 			<div>
 	  		<div className="list-group" style={{width:150, margin: 20}}>
 				  <span id="sp-drag1" className="list-group-item">
-				  	View
-				  	<img src={"./imgs/v.png"} className="toolsImg" id="drag1" draggable={true}></img>
+				  	View 
+				  	<CView name="View" type= {ItemTypes.View} key={100}/>
 				  </span>
 				  <span  id="sp-drag2" className="list-group-item">
 				  	Image
@@ -76,3 +78,5 @@ export default class LeftList extends React.Component {
 		)
 	};
 }
+
+export default LeftList

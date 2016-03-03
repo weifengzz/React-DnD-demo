@@ -1,9 +1,11 @@
 import React from 'react'
 import LeftList from './LeftList'
 import Container from './Container'
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend, { NativeTypes } from 'react-dnd-html5-backend';
 require("./css.css")
 
-export default React.createClass({
+var App = React.createClass({
   render() {
     return (
     	<div>
@@ -17,3 +19,4 @@ export default React.createClass({
     )
   }
 })
+export default DragDropContext(HTML5Backend)(App)
