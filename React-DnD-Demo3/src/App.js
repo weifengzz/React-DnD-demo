@@ -1,6 +1,6 @@
 import React from 'react'
 import LeftList from './LeftList'
-import Mobile from './Mobile'
+import Container from './Container'
 require("./css.css")
 
 export default React.createClass({
@@ -11,7 +11,7 @@ export default React.createClass({
 		      <LeftList/>
 		    </div>
 		    <div id="right">
-		    	<Mobile/>
+		    	<Container/>
 		    </div>
 		  </div>
     )

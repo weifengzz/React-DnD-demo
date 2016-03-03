@@ -13,7 +13,7 @@ export default class Mobile extends React.Component {
 					<div className="m_center_border">
 						<img src={"./imgs/b2.gif"} style={{height:453, width:32}}/>
 					</div>
-					<div className="m_center_center" onDrop={this.drop} onDragOver={this.allowDrop} style={{float:"left"}} style={{float:"left"}}>
+					<div className="m_center_center" style={{float:"left"}} style={{float:"left"}}>
 					</div>
 					<div className="m_center_border">
 						<img src={"./imgs/b4.gif"} style={{height:453, width:32}}/>
@@ -24,10 +24,6 @@ export default class Mobile extends React.Component {
 				</div>
 			</div>
 		)
-	};
-	allowDrop(event)
-	{
-		event.preventDefault();
 	};
 }
 
