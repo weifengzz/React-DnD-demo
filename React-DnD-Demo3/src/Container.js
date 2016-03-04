@@ -5,8 +5,6 @@ import Dustbin from './Dustbin';
 import CView from './CView';
 import ItemTypes from './ItemTypes';
 import update from 'react/lib/update';
-require ("bootstrap/dist/css/bootstrap.min.css")
-require("./css.css")
 
 class Container extends Component {
   constructor(props) {

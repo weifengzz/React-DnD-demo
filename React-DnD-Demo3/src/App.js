@@ -3,6 +3,9 @@ import LeftList from './LeftList'
 import Container from './Container'
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend, { NativeTypes } from 'react-dnd-html5-backend';
+import UiTree from './UiTree'
+
+require ("bootstrap/dist/css/bootstrap.min.css")
 require("./css.css")
 
 var App = React.createClass({
@@ -12,8 +15,11 @@ var App = React.createClass({
 		    <div id="left">
 		      <LeftList/>
 		    </div>
-		    <div id="right">
+		    <div id="center">
 		    	<Container/>
+		    </div>
+		    <div id="right">
+		    	<UiTree/>
 		    </div>
 		  </div>
     )

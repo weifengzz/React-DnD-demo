@@ -1,7 +1,6 @@
 import React from 'react'
 import CView from './CView';
-require ("bootstrap/dist/css/bootstrap.min.css")
-require("./css.css")
+
 import ItemTypes from "./ItemTypes"
 
 class LeftList extends React.Component {

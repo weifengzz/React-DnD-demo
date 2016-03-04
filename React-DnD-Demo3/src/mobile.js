@@ -1,6 +1,4 @@
 import React from 'react'
-require ("bootstrap/dist/css/bootstrap.min.css")
-require("./css.css")
 
 export default class Mobile extends React.Component {
 	render () {

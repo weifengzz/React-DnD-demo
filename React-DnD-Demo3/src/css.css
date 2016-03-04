@@ -6,11 +6,14 @@
 	float: left;
 }
 
+#center {
+	margin: 20;
+	float: left;
+}
 #right {
 	margin: 20;
 	float: left;
 }
-
 
 #left-bottom {
 	border:0px;padding:3px; PADDING:0px; width:150px; height:560px; LINE-HEIGHT: 20px; OVERFLOW-y: auto; 
