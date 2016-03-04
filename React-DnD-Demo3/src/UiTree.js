@@ -1,7 +1,8 @@
 var cx = require('classnames');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Tree = require('react-ui-tree/dist/react-ui-tree');
+var Tree = require('react-ui-tree');
+require('react-ui-tree/dist/react-ui-tree.css');
 var tree = require('./tree');
 
 var UiTree = React.createClass({
