@@ -10,6 +10,7 @@
     "test": "nwb test"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "example": "0.0.0",
     "lib": "^0.1.1",
     "react": "0.14.x",
